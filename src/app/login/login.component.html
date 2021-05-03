@@ -1,0 +1,86 @@
+<section id="form">
+  <!--form-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class="login-form">
+          <!--login form-->
+          <h2>Veuillez vous connecter</h2>
+          <form (submit)="login()" action="#">
+            <input
+              type="email"
+              name="email"
+              [(ngModel)]="email"
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              name="mdp"
+              [(ngModel)]="password"
+              placeholder="Mot de passe"
+            />
+
+            <button type="submit" class="btn btn-default">Connexion</button>
+          </form>
+        </div>
+        <!--/login form-->
+      </div>
+      <div class="col-sm-1">
+        <h2 class="or">OR</h2>
+      </div>
+      <div class="col-sm-4">
+        <div class="signup-form">
+          <!--sign up form-->
+          <h2>S'inscrire</h2>
+          <form (submit)="signup()" action="#">
+            <input
+              type="text"
+              [(ngModel)]="user.displayName"
+              #userName
+              required
+              name="username"
+              placeholder="Nom"
+            />
+
+            <input
+              type="text"
+              #adresse
+              required
+              [(ngModel)]="user.adresse"
+              name="adresse"
+              placeholder="Adresse"
+            />
+
+            <input
+              type="email"
+              #userEmail
+              required
+              [(ngModel)]="user.email"
+              name="mail"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              #phoneNumber
+              required
+              [(ngModel)]="user.phoneNumber"
+              name="phone"
+              placeholder="Telephone "
+            />
+            <input
+              type="password"
+              #userPwd
+              required
+              name="passe"
+              [(ngModel)]="user.password"
+              placeholder="Mot de passe"
+            />
+            <button type="submit" class="btn btn-default">S'inscrire</button>
+          </form>
+        </div>
+        <!--/sign up form-->
+      </div>
+    </div>
+  </div>
+</section>
+<!--/form-->
