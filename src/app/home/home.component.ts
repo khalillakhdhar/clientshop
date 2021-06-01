@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
     this.readcats()
 
     this.user = JSON.parse(localStorage.getItem("user"));
+    alert(this.user.uid);
     this.getUser();
     this.getproduits();
   }
