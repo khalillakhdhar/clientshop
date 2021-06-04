@@ -3,4 +3,5 @@ export class Commande {
     quantite:number;
     date_heure:string;
     etat:string;
+    username:string;
 }

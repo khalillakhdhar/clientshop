@@ -30,7 +30,8 @@ export class HomeComponent implements OnInit {
     this.readcats()
 
     this.user = JSON.parse(localStorage.getItem("user"));
-    alert(this.user.uid);
+    console.log("the user",this.user);
+    //alert(this.user.uid);
     this.getUser();
     this.getproduits();
   }
@@ -109,6 +110,7 @@ export class HomeComponent implements OnInit {
       pr.tel = this.cuse.phoneNumber;
       pr.iduser = this.cuse.id;
       pr.etat = "en cours";
+      pr.username = this.user.email;
       pr.quantite = 1;
       let p = Object.assign(pr);
 
